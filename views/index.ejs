@@ -3,13 +3,20 @@
 <%- include("partials/head.ejs") %>
   <body>
     <h1>Pokedex</h1>
-    <ul>
-      <% for( let pokedude in allMon ) { %>
-      <li>
-        <a href="/pokemon/<%=pokedude%>"><%=allMon[pokedude].name %></a>
-      </li>
-      <% } %>
-
-    </ul>
+    <div class="container" id="loadMore">
+            <% for( let pokedude in allMon ) { %>
+                <a class="items" href="/pokemon/<%=pokedude%>">
+                    <img src="<%=allMon[pokedude].img %>">
+                    <div class="details">
+                    #<%=allMon[pokedude].id %><br>
+                    <%=allMon[pokedude].name %><br>
+                    <%=allMon[pokedude].type %></div>
+                </a>
+            <% } %>
+    </div>
+                        <a href="" id="loadMore" style="display: inline-block;">
+                        <span class="button">Load more Pokémon</span>
+                        </a>
   </body>
 </html>
+
