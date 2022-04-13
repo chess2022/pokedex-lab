@@ -20,3 +20,4 @@ $("h5:contains(Ghost)").css({ "color": "#735746", "text-transform": "uppercase" 
 $("h5:contains(Dark)").css({ "color": "#705746", "text-transform": "uppercase" });
 $("h5:contains(Steel)").css({ "color": "#B7B7CE", "text-transform": "uppercase" });
 $("h5:contains(Fairy)").css({ "color": "#D685AD", "text-transform": "uppercase" });
+$("h5:contains(Dragon)").css({ "color": "#6F35FC","text-transform": "uppercase"});

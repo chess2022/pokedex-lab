@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<%- include("partials/head.ejs") %>
+  <body>
+    <header class="navBar">
+        <div class="logo"><img src="static/pokedex-logo.jpg"></div>
+        <div class="headerImg"><img src="static/header-pic.jpg"></div>
+        </div>
+    </header>
+    <div class="pokemonDetail">
+        <div id="image">               
+            <img src="<%=pokedude.img %>"></div>
+        <div id="detail">
+            <h3><%=pokedude.name %></h3>
+            <div class="types">
+                <div>
+                <h5><%=pokedude.type[0] %></h5></div>
+                <div>
+                <h5> <%=pokedude.type[1] %></h5></div>
+            </div>
+            <h4>Stats:</h4>
+            <div class="stats">
+                <div>
+                    <h5 id="hp">HP: <%= pokedude.stats.hp %> </id>
+                    <h5 id="attack">ATTACK: <%= pokedude.stats.attack %> </id>
+                </div><div>
+                    <h5 id="defense">DEFENSE: <%= pokedude.stats.defense %> </id>
+                    <h5 id="speed">SPEED: <%= pokedude.stats.speed %> </id>
+                </div>
+        </div>
+        <div id="edit"></div>
+        <div id="delete"></div>
+    </div>

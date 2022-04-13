@@ -2,7 +2,11 @@
 <html>
 <%- include("partials/head.ejs") %>
   <body>
-    <h1>Pokédex</h1>
+    <header class="navBar">
+        <div class="logo"><img src="static/pokedex-logo.jpg"></div>
+        <div class="headerImg"><img src="static/header-pic.jpg"></div>
+        </div>
+    </header>
     <div class="container">
             <% for( let pokedude in allMon ) { %>
                 <a class="items" href="/pokemon/<%=pokedude%>">
