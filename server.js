@@ -24,12 +24,7 @@ app.get("/pokemon/", (req, res) => {
   res.render("index.ejs", {allMon: pokemon});
 });
 
-// Show route - show a specific pokemon
-app.get("/pokemon/:id", (req, res) => {
-    res.render('show.ejs', {pokedude: pokemon[req.params.id]} )
-});
-
-// New route - show a pokemon to display
+// New route - create a new pokemon
 app.get("/pokemon/new", (req, res) => {
 
 });
@@ -37,6 +32,11 @@ app.get("/pokemon/new", (req, res) => {
 // Edit route - edit an existing pokemon
 app.get("/pokemon/:id/edit", (req, res) => {
 
+});
+
+// Show route - show a specific pokemon
+app.get("/pokemon/:id", (req, res) => {
+    res.render('show.ejs', {pokedude: pokemon[req.params.id]} )
 });
 
 // Create route - create a new pokemon
@@ -51,7 +51,9 @@ app.put("/pokemon/:id", (req, res) => {
 
 // Destroy route - delete pokemon from data file
 app.delete("/pokemon:id", (req, res) => {
-
+  const index = req.params.id; // grab the index from params
+  pokemon.splice(index, 1); //splice the pokedude from pokemon
+  res.redirect("/pokemon"); //redirect back to index page
 });
 
 app.listen(PORT, () => {

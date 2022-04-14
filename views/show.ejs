@@ -23,9 +23,19 @@
                     <h5 id="defense">DEFENSE: <%= pokedude.stats.defense %> </id>
                     <h5 id="speed">SPEED: <%= pokedude.stats.speed %> </id>
                 </div>
+            </div>
         </div>
-        <div id="edit"></div>
-        <div id="delete"></div>
+        <div id="edit">
+
+        </div>
+        <div id="delete">
+            <div>
+                <form action="/pokemon/<%=pokedude%>?_method=DELETE" method="post">
+                <input type="submit" value="DELETE">
+                </form>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

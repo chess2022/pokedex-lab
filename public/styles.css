@@ -92,7 +92,7 @@ a:link, a:visited {
       ". image image image image image . . . . . . . ."
       ". . . . . . . . . . . . . ."
       ". . . . . . . . . . . . . ."
-      ". . . . . . . . edit edit f delete delete ."
+      ". . . . . . . . edit edit . delete delete ."
       ". . . . . . . . . . . . . ."
       ". . . . . . . . . . . . . ."
       ". . . . . . . . . . . . . ."
@@ -114,10 +114,22 @@ a:link, a:visited {
 
 .pokemonDetail > #edit {
     grid-area: edit;
+    margin: auto;
 }
 
 .pokemonDetail > #delete {
     grid-area: delete;
+    margin: auto;
+}
+
+input[type="submit"]{
+	background: none;
+	color: blanchedalmond;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: none;
 }
 
 #hp {
@@ -135,6 +147,38 @@ a:link, a:visited {
 #speed {
     color: rgb(0, 153, 255);
 }
+
+
+/* ***************************
+** Tablet Media Query
+*************************** */
+
+@media screen and (min-width: 480px) and (max-width: 767px){
+    .headerImg, .logo {
+        max-width: 250px;
+    }
+}
+
+/* ***************************
+** Desktop Media Query
+*************************** */
+
+@media screen and (min-width: 767px) and (max-width: 970px){
+    .headerImg, .logo {
+        max-width: 300px;
+    }
+}
+
+/* ***************************
+** Mobile Media Query
+*************************** */
+
+@media screen and (min-width: 500px) and (max-width: 625px){
+    .headerImg, .logo {
+        max-width: 200px;
+    }
+}
+
 
 /* for when I get the overflow thing figured out */
 /* #loadMore {
