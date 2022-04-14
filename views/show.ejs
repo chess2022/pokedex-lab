@@ -17,16 +17,18 @@
             <h4>Stats:</h4>
             <div class="stats">
                 <div>
-                    <h5 id="hp">HP: <%= pokedude.stats.hp %> </id>
-                    <h5 id="attack">ATTACK: <%= pokedude.stats.attack %> </id>
+                    <h5 id="hp">HP: <%= pokedude.stats.hp %> </h5>
+                    <h5 id="attack">ATTACK: <%= pokedude.stats.attack %> </h5>
                 </div><div>
-                    <h5 id="defense">DEFENSE: <%= pokedude.stats.defense %> </id>
-                    <h5 id="speed">SPEED: <%= pokedude.stats.speed %> </id>
+                    <h5 id="defense">DEFENSE: <%= pokedude.stats.defense %> </h5>
+                    <h5 id="speed">SPEED: <%= pokedude.stats.speed %> </h5>
                 </div>
             </div>
         </div>
         <div id="edit">
-
+                <a href="/pokemon/<%= index %>/edit">
+                <button>EDIT</button>
+                </a>
         </div>
         <div id="delete">
             <div>

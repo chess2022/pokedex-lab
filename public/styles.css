@@ -122,7 +122,7 @@ a:link, a:visited {
     margin: auto;
 }
 
-input[type="submit"]{
+input[type="submit"], button{
 	background: none;
 	color: blanchedalmond;
 	border: none;

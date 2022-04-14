@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<%- include("partials/head.ejs") %>
+  <body>
+<%- include("partials/header.ejs") %> 
+    <div class="pokemonDetail">
+        <div id="image">               
+            <img src="<%=pokedude.img %>"></div>
+        <div id="detail">
+            <form id="updatePokemon" action="/pokemon/<%= index %>?_method=PUT" method="post">
+                <h3>NAME:</h3> <input type="text" name="name" value="<%=pokedude.name%>" /><br />
+                <div class="types">
+                    <div><h5>TYPE 1</h5> <input type="text" name="type1" value="<%=pokedude.stats[0]%>" /></div>
+                    <div><h5>TYPE 2</h5> <input type="text" name="type2" value="<%=pokedude.stats[1]%>" /></div>
+                </div>
+                <h4>Stats:</h4>
+                <div class="stats">
+                    <div>
+                        <h5 id="hp">HP:</h5> <input type="text" name="hp" value="<%= pokedude.stats.hp %> "/>
+                        <h5 id="attack">ATTACK:</h5><input type="text" name="attack" value="<%= pokedude.stats.attack %> "/></div>
+                    <div>
+                        <h5 id="defense">DEFENSE:</h5> <input type="text" name="defense" value="<%= pokedude.stats.defense %> "/>
+                        <h5 id="speed">SPEED:</h5> <input type="text" name="speed" value="<%= pokedude.stats.speed %> "/></div>
+                </div>
+            </form>
+        </div>
+        <div id="edit">
+                <input type="submit" form="updatePokemon" value="UPDATE">
+        </div>
+        <div id="delete">
+                <form action="/pokemon/<%=pokedude%>?_method=DELETE" method="post">
+                <input type="submit" value="DELETE">
+                </form>
+        </div>
+
+    </div>
+</body>
+</html>
