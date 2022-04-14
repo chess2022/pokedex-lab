@@ -2,11 +2,7 @@
 <html>
 <%- include("partials/head.ejs") %>
   <body>
-    <header class="navBar">
-        <div class="logo"><img src="static/pokedex-logo.jpg"></div>
-        <div class="headerImg"><img src="static/header-pic.jpg"></div>
-        </div>
-    </header>
+<%- include("partials/header.ejs") %> 
     <div class="pokemonDetail">
         <div id="image">               
             <img src="<%=pokedude.img %>"></div>
@@ -31,3 +27,5 @@
         <div id="edit"></div>
         <div id="delete"></div>
     </div>
+</body>
+</html>
