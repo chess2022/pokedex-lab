@@ -29,6 +29,22 @@ app.get("/pokemon/new", (req, res) => {
   res.render("new.ejs", {allMon: pokemon})
 });
 
+app.put("/pokemon/new", (req, res) => {
+  let updatedPokemon = { ...pokemon[req.params.id] };
+  updatedPokemon.id = pokemon.length + 1;
+  updatedPokemon.img = ("/static/newMon.jpg")
+  updatedPokemon.name = req.body.name;
+  updatedPokemon.type = [req.body.type1, req.body.type2];
+  updatedPokemon.stats = {
+    hp: req.body.hp,
+    attack: req.body.attack,
+    defense: req.body.defense,
+    speed: req.body.speed,
+  };
+  pokemon[req.params.id] = updatedPokemon;
+  res.redirect(`/pokemon/${req.params.id}`);
+});
+
 
 // Destroy route - delete pokemon from data file
 app.delete("/pokemon/:id", (req, res) => {
@@ -40,8 +56,6 @@ app.delete("/pokemon/:id", (req, res) => {
 // Update route - update pokemon to the data file
 app.put("/pokemon/:id", (req, res) => {
     let updatedPokemon = {...pokemon[req.params.id]}
-    updatedPokemon.id = pokemon.length + 1;
-    // updatedPokemon.img = ("/static/newMon.jpg")
     updatedPokemon.name = req.body.name
     updatedPokemon.type= [req.body.type1, req.body.type2]
     updatedPokemon.stats= {
