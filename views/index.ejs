@@ -2,7 +2,14 @@
 <html>
 <%- include("partials/head.ejs") %>
   <body>
-<%- include("partials/header.ejs") %> 
+    <header class="navBar">
+        <div><img class="logo" src="/static/Pokédex_logo.png">
+        <div id="create">
+             <img src="/static/pokeball.png"><a href="/pokemon/">ADD A POKEMON</a><img src="/static/pokeball.png">
+        </div>        </div>
+        <div><img class="headerImg" src="/static/header-pic.jpg"></div>
+        </div>
+    </header>
     <div class="container">
             <% for( let pokedude in allMon ) { %>
                 <a class="items" href="/pokemon/<%=pokedude%>">

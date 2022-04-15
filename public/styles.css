@@ -72,6 +72,10 @@ a:link, a:visited {
     color: #696962;
 }
 
+a:hover {
+    color: rgb(208, 21, 21);
+}
+
 .pokemonDetail {
     display: grid;
     background-image: url("pokedex.png");
@@ -158,6 +162,12 @@ input[type=text] {
     color: rgb(0, 153, 255);
 }
 
+#create {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ***************************
 ** Tablet Media Query
