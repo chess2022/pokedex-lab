@@ -21,3 +21,22 @@ $("h5:contains(Dark)").css({ "color": "#705746", "text-transform": "uppercase" }
 $("h5:contains(Steel)").css({ "color": "#B7B7CE", "text-transform": "uppercase" });
 $("h5:contains(Fairy)").css({ "color": "#D685AD", "text-transform": "uppercase" });
 $("h5:contains(Dragon)").css({ "color": "#6F35FC","text-transform": "uppercase"});
+
+$("h5:contains(grass)").css({"color": "#7AC74C", "text-transform": "uppercase"});
+$("h5:contains(poison)").css({ "color": "#A33EA1", "text-transform": "uppercase" });
+$("h5:contains(fire)").css({ "color": "#EE8130", "text-transform": "uppercase" });
+$("h5:contains(flying)").css({ "color": "#A98FF3", "text-transform": "uppercase" });
+$("h5:contains(water)").css({"color": "#6390F0", "text-transform": "uppercase" });
+$("h5:contains(bug)").css({ "color": "#A6B91A", "text-transform": "uppercase" });
+$("h5:contains(normal)").css({ "color": "#A8A77A", "text-transform": "uppercase" });
+$("h5:contains(electric)").css({ "color": "#F7D02C", "text-transform": "uppercase" });
+$("h5:contains(ice)").css({ "color": "#96D9D6", "text-transform": "uppercase" });
+$("h5:contains(fighting)").css({ "color": "#C22E28", "text-transform": "uppercase" });
+$("h5:contains(ground)").css({ "color": "#E2BF65", "text-transform": "uppercase" });
+$("h5:contains(psychic)").css({ "color": "#F95587", "text-transform": "uppercase" }); 
+$("h5:contains(rock)").css({ "color": "#B6A136", "text-transform": "uppercase" });
+$("h5:contains(ghost)").css({ "color": "#735746", "text-transform": "uppercase" });
+$("h5:contains(dark)").css({ "color": "#705746", "text-transform": "uppercase" });
+$("h5:contains(steel)").css({ "color": "#B7B7CE", "text-transform": "uppercase" });
+$("h5:contains(fairy)").css({ "color": "#D685AD", "text-transform": "uppercase" });
+$("h5:contains(dragon)").css({ "color": "#6F35FC","text-transform": "uppercase"});
