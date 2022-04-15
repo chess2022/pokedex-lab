@@ -57,8 +57,8 @@ app.delete("/pokemon/:id", (req, res) => {
 app.put("/pokemon/:id", (req, res) => {
     let updatedPokemon = {...pokemon[req.params.id]}
     updatedPokemon.name = req.body.name
-    updatedPokemon.type= [req.body.type1, req.body.type2]
-    updatedPokemon.stats= {
+    updatedPokemon.type = [req.body.type1, req.body.type2]
+    updatedPokemon.stats = {
       hp: req.body.hp,
       attack: req.body.attack,
       defense: req.body.defense,
@@ -67,6 +67,41 @@ app.put("/pokemon/:id", (req, res) => {
     pokemon[req.params.id] = updatedPokemon;
     res.redirect(`/pokemon/${req.params.id}`);
 });
+
+
+///////////////////////////////////////////////////////
+// Testing out using a function inside the put request and 
+// I don't know lol
+////////////////////////////////////////////////////////
+// app.put("/pokemon/:id", (req, res) => {
+//     let updatedPokemon = { ...pokemon[req.params.id] };
+//     function getPage(req) {
+//       if (req = "new") {
+//           updatedPokemon.id = pokemon.length + 1;
+//           updatedPokemon.img = "/static/newMon.jpg";
+//           updatedPokemon.name = req.body.name;
+//           updatedPokemon.type = [req.body.type1, req.body.type2];
+//           updatedPokemon.stats = {
+//             hp: req.body.hp,
+//             attack: req.body.attack,
+//             defense: req.body.defense,
+//             speed: req.body.speed,
+//         }
+//       } else {
+//           updatedPokemon.name = req.body.name;
+//           updatedPokemon.type = [req.body.type1, req.body.type2];
+//           updatedPokemon.stats = {
+//             hp: req.body.hp,
+//             attack: req.body.attack,
+//             defense: req.body.defense,
+//             speed: req.body.speed,
+//         }
+//       }
+//     }
+//     getPage(req)
+//     pokemon[req.params.id] = updatedPokemon;
+//     res.redirect(`/pokemon/${req.params.id}`);
+// })
 
 
 // Edit route - edit an existing pokemon
