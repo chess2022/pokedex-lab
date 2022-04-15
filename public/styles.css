@@ -132,6 +132,10 @@ input[type="submit"], button{
 	outline: none;
 }
 
+input[type=text] {
+  width: 75%;
+}
+
 #hp {
     color: green;
 }
