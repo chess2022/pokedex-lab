@@ -40,6 +40,8 @@ app.delete("/pokemon/:id", (req, res) => {
 // Update route - update pokemon to the data file
 app.put("/pokemon/:id", (req, res) => {
     let updatedPokemon = {...pokemon[req.params.id]}
+    updatedPokemon.id = pokemon.length + 1;
+    updatedPokemon.img = ("/static/newMon.jpg")
     updatedPokemon.name = req.body.name
     updatedPokemon.type= [req.body.type1, req.body.type2]
     updatedPokemon.stats= {
@@ -50,23 +52,6 @@ app.put("/pokemon/:id", (req, res) => {
     }
     pokemon[req.params.id] = updatedPokemon;
     res.redirect(`/pokemon/${req.params.id}`);
-});
-
-// Create route - create a new pokemon
-app.post("/pokemon", (req, res) => {
-    let newPokemon = { ...pokemon[-1] };
-    newPokemon.img = {img: req.body.newImage}
-    newPokemon.name = req.body.name;
-    newPokemon.type = [req.body.type1, req.body.type2];
-    newPokemon.stats = {
-      hp: req.body.hp,
-      attack: req.body.attack,
-      defense: req.body.defense,
-      speed: req.body.speed,
-      id: (pokemon.length + 2)
-    };
-    pokemon.push(newPokemon)
-    res.redirect(`/pokemon/${newPokemon.id}`);
 });
 
 
@@ -86,9 +71,6 @@ app.get("/pokemon/:id", (req, res) => {
       index: req.params.id,
     });
 });
-
-
-
 
 
 

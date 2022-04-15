@@ -5,9 +5,8 @@
 <%- include("partials/header.ejs") %> 
     <div class="pokemonDetail">
         <div id="image"> 
-            <form id="addImage" action="<%= allMon.push() %>?_method=PUT" method="post">
-                <input type="file" class="newImage" id="newImage" name="newImage" accept="image/png, image/jpeg">
-            </form> </div>
+                <img src="/static/newMon.jpg" id="newImage" name="newImage">
+             </div>
         <div id="detail">
             <form id="createPokemon" action="<%= allMon.push() %>?_method=PUT" method="post">
 
