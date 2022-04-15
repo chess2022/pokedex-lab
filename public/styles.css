@@ -132,7 +132,7 @@ a:hover {
     align-content: end;
 }
 
-input[type="submit"], button{
+input[type="submit"], input[type="reset"],button{
 	background: none;
 	color: blanchedalmond;
 	border: none;

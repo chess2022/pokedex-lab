@@ -26,8 +26,9 @@ app.get("/pokemon/", (req, res) => {
 
 // New route - create a new pokemon
 app.get("/pokemon/new", (req, res) => {
-
+  res.render("new.ejs", {allMon: pokemon})
 });
+
 
 // Destroy route - delete pokemon from data file
 app.delete("/pokemon/:id", (req, res) => {
@@ -39,6 +40,7 @@ app.delete("/pokemon/:id", (req, res) => {
 // Update route - update pokemon to the data file
 app.put("/pokemon/:id", (req, res) => {
     let updatedPokemon = {...pokemon[req.params.id]}
+    updatedPokemon.name = req.body.name
     updatedPokemon.type= [req.body.type1, req.body.type2]
     updatedPokemon.stats= {
       hp: req.body.hp,
@@ -46,14 +48,25 @@ app.put("/pokemon/:id", (req, res) => {
       defense: req.body.defense,
       speed: req.body.speed
     }
-    updatedPokemon.name = req.body.name
     pokemon[req.params.id] = updatedPokemon;
     res.redirect(`/pokemon/${req.params.id}`);
 });
 
 // Create route - create a new pokemon
 app.post("/pokemon", (req, res) => {
-
+    let newPokemon = { ...pokemon[-1] };
+    newPokemon.img = {img: req.body.newImage}
+    newPokemon.name = req.body.name;
+    newPokemon.type = [req.body.type1, req.body.type2];
+    newPokemon.stats = {
+      hp: req.body.hp,
+      attack: req.body.attack,
+      defense: req.body.defense,
+      speed: req.body.speed,
+      id: (pokemon.length + 2)
+    };
+    pokemon.push(newPokemon)
+    res.redirect(`/pokemon/${newPokemon.id}`);
 });
 
 
