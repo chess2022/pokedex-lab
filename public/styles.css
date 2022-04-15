@@ -67,6 +67,18 @@ h3, h5, h4 {
     margin: 0;
 }
 
+h5 {
+    font-size: 1.5vw;
+}
+
+h4 {
+    font-size: 1.75vw;
+}
+
+h3 { 
+    font-size: 2vw;
+}
+
 a:link, a:visited {
     text-decoration: none;
     color: #696962;
@@ -140,6 +152,7 @@ input[type="submit"], input[type="reset"],button{
 	font: inherit;
 	cursor: pointer;
 	outline: none;
+    font-size: 1.75vw;
 }
 
 input[type=text] {
