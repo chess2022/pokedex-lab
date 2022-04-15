@@ -38,8 +38,17 @@ app.delete("/pokemon/:id", (req, res) => {
 
 // Update route - update pokemon to the data file
 app.put("/pokemon/:id", (req, res) => {
-    pokemon[req.params.id] = req.body;
-    res.redirect("/pokemon");
+    let updatedPokemon = {...pokemon[req.params.id]}
+    updatedPokemon.type= [req.body.type1, req.body.type2]
+    updatedPokemon.stats= {
+      hp: req.body.hp,
+      attack: req.body.attack,
+      defense: req.body.defense,
+      speed: req.body.speed
+    }
+    updatedPokemon.name = req.body.name
+    pokemon[req.params.id] = updatedPokemon;
+    res.redirect(`/pokemon/${req.params.id}`);
 });
 
 // Create route - create a new pokemon

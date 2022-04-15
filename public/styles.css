@@ -92,7 +92,7 @@ a:link, a:visited {
       ". image image image image image . . . . . . . ."
       ". . . . . . . . . . . . . ."
       ". . . . . . . . . . . . . ."
-      ". . . . . . . . edit edit . delete delete ."
+      ". . back . . . . . edit edit . delete delete ."
       ". . . . . . . . . . . . . ."
       ". . . . . . . . . . . . . ."
       ". . . . . . . . . . . . . ."
@@ -120,6 +120,12 @@ a:link, a:visited {
 .pokemonDetail > #delete {
     grid-area: delete;
     margin: auto;
+}
+
+.pokemonDetail > #back {
+    grid-area: back;
+    margin: auto;
+    align-content: end;
 }
 
 input[type="submit"], button{
